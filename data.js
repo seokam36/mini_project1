@@ -1,4 +1,4 @@
-const studyList = [
+/* const studyList = [
     {
         contentNo: 1,
         title: "토익 스터디 하실분",
@@ -43,38 +43,9 @@ const studyList = [
         detail: "온라인으로할지 오프라인으로할지 아직 미정입니다",
         contentDate:"2026.07.27"
     }
-];
+]; */
 
-const user = [
-    {
-        userNo: 1,
-        userId: 'whgusdn',
-        userPw: 1111,
-        userName: "조현우",
-        roleNo: 1
-    },
-    {
-        userNo: 2,
-        userId: 'rlawlghks',
-        userPw: 2222,
-        userName: "김지환",
-        roleNo: 1
-    },
-    {
-        userNo: 3,
-        userId: 'wntjrdka',
-        userPw: 3333,
-        userName: "주석암",
-        roleNo: 4
-    },
-    {
-        userNo: 4,
-        userId: 'qkrgusals',
-        userPw: 4444,
-        userName: "박현민",
-        roleNo: 3
-    }
-];
+
 
 const studyType = [
     {
@@ -107,10 +78,6 @@ const role = [
     {
         roleNo:3,
         roleName:"멘토"
-    },
-    {
-        roleNo:4,
-        roleName:"관리자"
     },
 ];
 
@@ -158,10 +125,6 @@ const category = [
 ]
 if(localStorage.getItem('studyList') == null){
     localStorage.setItem('studyList', JSON.stringify(studyList))
-}
-
-if(localStorage.getItem('user') == null){
-    localStorage.setItem('user', JSON.stringify(user))
 }
 
 if(localStorage.getItem('studyType') == null){
