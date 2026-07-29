@@ -67,6 +67,7 @@ function getStudyDetail() {
         document.querySelector('.box2 .bt1').innerHTML = study.maxMember + '명';
         document.querySelector('.box3 .bt1').innerHTML = typeName;
         document.querySelector('.m2').innerHTML = study.detail;
+        
     }
 }
 
