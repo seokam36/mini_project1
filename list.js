@@ -33,7 +33,7 @@ function printList(){
         /* studyList.member의 배열의 길이가 maxMember랑 비교해서 작으면 신청하기 아니면 모집완료 */
         let area = study.members.length < study.maxMember ? 
                     `<button class="apply_btn" onclick="apply(${study.contentNo})"> 신청하기 </button>` :
-                    `<div class="full"> 모집완료 </div>`
+                    `<div class="full" > 모집완료 </div>`
         html += `<div id="card">
                     <div class="title">${study.title}</div>
                     <div class="name">${categoryName}</div>
@@ -72,4 +72,18 @@ function apply(contentNo){
     localStorage.setItem('studyList', JSON.stringify(studyList))
     alert('신청완료')
     printList()
+}
+
+let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+
+if(loginUser != 0){
+    document.querySelector('#user').innerHTML = `${loginUser.userName}님 환영합니다!`;
+    document.querySelector('#login').innerHTML = `<a href='' onclick="logout()">Logout</a>`;
+    document.querySelector("#register").style.display="none";
+}
+
+function logout(){
+    localStorage.removeItem("loginUser");
+    alert("로그아웃 되었습니다.");
+    location.reload();
 }
