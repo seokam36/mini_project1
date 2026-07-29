@@ -42,7 +42,7 @@ function printMyList(){
                         <div class="title">${list.title}</div>
                         <div class="name">${categoryName}</div>
                         <div class="detail">${list.detail}</div>
-                        <div class="member">${removeBtn}<button class="leave" onclick="leave()">나가기</button>
+                        <div class="member">${removeBtn}<button class="leave" onclick="leave(${list.contentNo})">나가기</button>
                         방인원 <span>${list.members.length}</span>/<span>${list.maxMember}</span></div>
                     </div>`
         }
@@ -51,6 +51,7 @@ function printMyList(){
     myList.innerHTML=html
 }
 
+/* 방 삭제하기 */
 function remove(contentNo){
     let studyList = JSON.parse(localStorage.getItem('studyList'))
     for(let i=0; i<studyList.length; i++){
@@ -61,16 +62,28 @@ function remove(contentNo){
         }
     }
     localStorage.setItem('studyList', JSON.stringify(studyList))
-    prompt("방 삭제 완료")
+    alert("방 삭제 완료")
     printMyList()
 }
 
+/* 방 나가기 */
 function leave(contentNo){
     let studyList = JSON.parse(localStorage.getItem('studyList'))
     for(let i=0; i<studyList.length; i++){
-        
+        let study = studyList[i]
+        if(study.contentNo == contentNo){
+            /* members의 현재로그인한 유저번호 인덱스 찾아서 삭제 */
+            let index = study.members.indexOf(loginUser.userNo)
+            study.members.splice(index, 1)
+            break
+        }
     }
+    localStorage.setItem('studyList',JSON.stringify(studyList))
+    alert("방 나가기 완료")
+    printMyList()
 }
+
+
 let loginUser = JSON.parse(localStorage.getItem('loginUser'))
 
 if(loginUser != 0){
