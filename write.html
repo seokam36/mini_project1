@@ -18,11 +18,11 @@
         </div>
 
         <div class="nav">
-            <a href="index.html">홈</a>
+            <a href="mainpage.html">홈</a>
             <a href="list.html">스터디 찾기</a>
             <a href="write.html">스터디 모집</a>
             <a href="#">내 스터디</a>
-            <a href="#">마이페이지</a>
+            <a href="mypage.html">마이페이지</a>
         </div>
 
         <div class="logout">
@@ -83,11 +83,16 @@
                 </div>
             </div>
             <hr>
-            <div class="form-row2">
-                <div class="form-label"> 모집 인원 </div>
-                <div>
-                <input id="personnel" class="form-input count-input" type="text" placeholder="인원을 입력해주세요.">
-            </div>    
+             <div class="form-row">
+            <div class="form-label"> 모집 인원 </div>
+            <select id="categorySelect" class="form-select">
+                <option value="">인원을 선택하세요.</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+            </select>
+  
             <div class="form-label2"> 진행 방식 </div>
             <select id="studyTypeSelect" class="form-select">
                 <option value="1">온라인</option>
@@ -105,14 +110,16 @@
                 <input id="pwdInput" class="form-input" type="password" placeholder="사용자의 비밀번호를 입력해주세요.">
             </div>
             <div class="help-text">
-                . 
+                . 사용자 비밀번호는 게시물 등록 및 수정/삭제 시 필요합니다.
             </div>
+             <hr>
+             <div class="btn-area">
+                <button class="btn btn-sub" type="button" onclick="moveList">← 목록으로</button>
+                <button class="btn btn-main" type="button" onclick="studyWrite">등록하기</button>
+             </div>
         </div>
      </div>
 </div>
-
-
-
-</div>
+</div> 
 </body>
 </html>
