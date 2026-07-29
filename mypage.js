@@ -21,8 +21,8 @@ function printMyList(){
     /* 전체리스트 URL로 뽑아언 userNo랑 전체리스트 userNo 같은값 출력*/
     for(let i=0; i<studyList.length; i++){
         let list = studyList[i]
-        if(list.userNo == loginUser.userNo){
-            let categoryName = ''
+        if(list.members.includes(loginUser.userNo)){
+            let categoryName = '' 
             /* 카테고리 이름과 카테고리 넘버 매핑 */
             for(let j=0; j<category.length; j++){
                 if(list.categoryNo == category[j].categoryNo){
@@ -31,7 +31,7 @@ function printMyList(){
                 }
             }
             
-            html += `<div class="card">
+            html += `<div id="card">
                         <div class="title">${list.title}</div>
                         <div class="name">${categoryName}</div>
                         <div class="detail">${list.detail}</div>
@@ -41,4 +41,18 @@ function printMyList(){
     }
 
     myList.innerHTML=html
+}
+
+let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+
+if(loginUser != 0){
+    document.querySelector('#user').innerHTML = `${loginUser.userName}님 환영합니다!`;
+    document.querySelector('#login').innerHTML = `<a href='' onclick="logout()">Logout</a>`;
+    document.querySelector("#register").style.display="none";
+}
+
+function logout(){
+    localStorage.removeItem("loginUser");
+    alert("로그아웃 되었습니다.");
+    location.reload();
 }

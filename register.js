@@ -32,7 +32,7 @@ function register(){
     if(userList==null){userList=[]}
     else{userList=JSON.parse(userList)}
     // 마지막 배열에서 1개씩 추가
-    user.userNo = userList.length == 0 ? 1 : userList[userList.length-1].no+1
+    user.userNo = userList.length == 0 ? 1 : userList[userList.length-1].userNo+1
     userList.push(user)
     
     localStorage.setItem('userList', JSON.stringify(userList))
