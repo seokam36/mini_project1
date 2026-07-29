@@ -5,10 +5,26 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Page Title</title>
     <link rel='stylesheet' href='mypage.css'>
+    <link rel='stylesheet' href='mainpage.css'>
 </head>
 <body>
-    <div>           <!-- header -->
-
+    <div id="header">
+        <!--로그인,회원기입-->
+        <ul id="topmenu">
+                <li id="user"></li>
+                <li id="login"><a href="login.html">Login</a><span>|</span></li>
+                <li id="register"><a href="register.html">Register</a></li>
+        </ul>
+        <!--카테고리 선택-->
+        <ul id="mainmenu">
+            <div><a href="mainpage.html"> <img class="logo" src="img/logo_header.png"> </a></div>
+            <ul>
+                <li><a href="mainpage.html">Home</a></li>
+                <li><a href="list.html">스터디 찾기</a></li>
+                <li><a href="write.html">스터디 모집/등록</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+            </ul>
+        </ul>
     </div>
     
     <div id="body">           <!-- body -->
