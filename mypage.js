@@ -56,6 +56,7 @@ function remove(contentNo){
     let studyList = JSON.parse(localStorage.getItem('studyList'))
     for(let i=0; i<studyList.length; i++){
         let study = studyList[i]
+        /* 매개변수 받은 contentNo랑 studyList.contentNo 같은 값 찾아서 해당하는 인덱스 삭제 */
         if(study.contentNo == contentNo){
             studyList.splice(i,1)
             break

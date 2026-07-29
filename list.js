@@ -10,7 +10,7 @@ function printList(){
     /* 스토리지 studyList값 꺼내서 studyList 저장 */
     let studyList = localStorage.getItem('studyList')
     if(studyList == null){
-        let studyList = []
+        studyList = []
     } else {
         studyList = JSON.parse(studyList)
     }
@@ -20,7 +20,7 @@ function printList(){
 
     /* 전체 리스트 반복문으로 출력 */
     for(let i=0; i<studyList.length; i++){
-        study = studyList[i]
+        let study = studyList[i]
         /* 카테고리넘버, 카테고리 이름 매핑*/
         let categoryName = ''
         for(let j=0; j<category.length; j++){
@@ -35,9 +35,9 @@ function printList(){
                     `<button class="apply_btn" onclick="apply(${study.contentNo})"> 신청하기 </button>` :
                     `<div class="full" > 모집완료 </div>`
         html += `<div id="card">
-                    <div class="title">${study.title}</div>
+                    <div class="title"><a href="view.html?no=${study.contentNo}">${study.title}</a></div>
                     <div class="name">${categoryName}</div>
-                    <div class="detail"">${study.detail}</div>
+                    <div class="detail"><a href="view.html?no=${study.contentNo}">${study.detail}</a></div>
                     <div class="member">${area} 방인원 <span>${study.members.length}</span>/<span>${study.maxMember}</span></div>
                 </div>`
     }
@@ -61,7 +61,7 @@ function apply(contentNo){
 
     /* studyList.contentNo 같은 값 찾아서 members 배열에 contentNo 넣기 */
     for(let i=0; i<studyList.length; i++){
-        study = studyList[i]
+        let study = studyList[i]
         if(study.contentNo == contentNo){
             study.members.push(loginUser.userNo)
             break
