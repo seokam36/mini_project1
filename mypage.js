@@ -30,12 +30,18 @@ function printMyList(){
                     break
                 }
             }
-            
+            let removeBtn=''
+            if(list.userNo == loginUser.userNo){
+                removeBtn = `<button class="remove" onclick="remove()">
+                            삭제하기</button>`
+            }
+
             html += `<div id="card">
                         <div class="title">${list.title}</div>
                         <div class="name">${categoryName}</div>
                         <div class="detail">${list.detail}</div>
-                        <div class="member">방인원 <span>${list.members.length}</span>/<span>${list.maxMember}</span></div>
+                        <div class="member">${removeBtn}<button class="leave" onclick="leave()">나가기</button>
+                        방인원 <span>${list.members.length}</span>/<span>${list.maxMember}</span></div>
                     </div>`
         }
     }
