@@ -38,8 +38,9 @@ a { text-decoration: none; }
     padding: 0px 25px;
 }
 .logo{
-    height: 50px;
-    width: 50px;
+    width: 210px;
+    height: auto;
+    display: block;
 }   
 #mainmenu > ul{
     display: flex;
@@ -62,7 +63,7 @@ a { text-decoration: none; }
     color: white;
 }
 #main1, #main2, #main3{
-    background-image: url("project/img/스터디.jpg");
+    background-image: url("img/스터디.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed; 
