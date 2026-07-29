@@ -24,10 +24,12 @@ function login(){
             break;
         }
     }
+
     if(loginUser == 0){
         alert('아이디 또는 비밀번호가 일치하지 않습니다')
         return;
     }
+    
     alert(`${loginUser.userName}님 로그인 성공입니다`)
     localStorage.setItem('loginUser', JSON.stringify(loginUser))
     location.href = `mainpage.html`;

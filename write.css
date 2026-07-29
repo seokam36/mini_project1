@@ -39,7 +39,6 @@ input, select, textarea, button {
     width: 1280px;
     height: 80px;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
 }

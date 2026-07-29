@@ -17,7 +17,7 @@ a { text-decoration: none; }
     top:0;
     left:0;
     width: 100%;
-    background-color: #FFFBEB;
+    background-color: #FFFFFF;
 }
 
 #topmenu{
@@ -127,7 +127,7 @@ a { text-decoration: none; }
     padding: 20px;
     border: 1px solid gray;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
     position: relative;
 }
@@ -135,16 +135,19 @@ a { text-decoration: none; }
 #popup > ul > li > span{
     position: absolute;
     top: 15px;
-    right: 40px;
+    right: 80px;
     display: none;
     width: 80px;
-    height: 30px;
-    background-color: black;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     border-radius: 5px;
-    text-align: center;
+    font-family:'Microorganism';
+    font-size: 20px;
+    justify-content: center;   
+    align-items: center;
 }
 
 #popup > ul > li:hover .popupsub{
-    display: inline;
+    display: flex;
 }

@@ -17,11 +17,11 @@ a { text-decoration: none; }
     top:0;
     left:0;
     width: 100%;
-    background-color: #FFFBEB;
+    height: 80px;
+    background-color: #F5FAFA;
 }
 .logo{
-    height: 50px;
-    width: auto;
+    width: 260px;
 }
 #main{
     height:100vh;
@@ -52,4 +52,13 @@ a { text-decoration: none; }
     width: 70px;
     font-family: 'Microorganism';
     font-size: 25px;
+}
+.register{
+    font-family: 'Microorganism';
+    font-size: 25px;
+    width: 80px;
+    height: 30px;
+    background-color: #F5FAFA;
+    border-radius: 5px;
+    border: none;
 }
