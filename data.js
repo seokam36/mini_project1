@@ -1,4 +1,4 @@
-/* const studyList = [
+const studyList = [
     {
         contentNo: 1,
         title: "토익 스터디 하실분",
@@ -44,7 +44,7 @@
         contentDate:"2026.07.27"
     }
 ];
- */
+
 
 
 const studyType = [

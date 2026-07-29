@@ -84,6 +84,121 @@ function leave(contentNo){
     printMyList()
 }
 
+/* 이름 변경 */
+function editName(){
+    let input = document.querySelector("#editName input")
+    let name = input.value
+    /* 이름 안적을시 함수종료 */
+    if(name == ""){
+        alert("변경할 이름을 입력하세요")
+        return
+    }
+
+    let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+    let userList = JSON.parse(localStorage.getItem('userList'))
+
+    for(let i=0; i<userList.length; i++){
+        let user = userList[i]
+        if (user.userNo == loginUser.userNo){
+            user.userName = name
+            break
+        }
+    }
+
+    /* 현재 로그인한 정보도 변경 */
+    loginUser.userName = name
+    localStorage.setItem('loginUser', JSON.stringify(loginUser))
+    localStorage.setItem('userList', JSON.stringify(userList))
+    alert('변경 완료')
+    document.querySelector('#user').innerHTML = `${loginUser.userName}님 환영합니다!`
+    input.value = ""
+}
+
+/* 패스워드 변경 */
+function editPw(){
+    let input = document.querySelector("#editPw input")
+    let pw = input.value
+    /* 비밀번호 안적을시 함수종료 */
+    if(pw == ""){
+        alert("변경할 비밀번호를 입력하세요")
+        return
+    }
+
+    let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+    let userList = JSON.parse(localStorage.getItem('userList'))
+
+    for(let i=0; i<userList.length; i++){
+        let user = userList[i]
+        if (user.userNo == loginUser.userNo){
+            user.userPw = pw
+            break
+        }
+    }
+
+    /* 현재 로그인한 정보도 변경 */
+    loginUser.userPw = pw
+    localStorage.setItem('loginUser', JSON.stringify(loginUser))
+    localStorage.setItem('userList', JSON.stringify(userList))
+    alert('변경 완료')
+    input.value = ""
+}
+
+/* 아이디 변경 */
+function editId(){
+    let input = document.querySelector("#editId input")
+    let id = input.value
+    /* 아이디 안적을시 함수종료 */
+    if(id == ""){
+        alert("변경할 아이디를 입력하세요")
+        return
+    }
+
+    let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+    let userList = JSON.parse(localStorage.getItem('userList'))
+
+    for(let i=0; i<userList.length; i++){
+        let user = userList[i]
+        if (user.userNo == loginUser.userNo){
+            user.userId = id
+            break
+        }
+    }
+
+    /* 현재 로그인한 정보도 변경 */
+    loginUser.userId = id
+    localStorage.setItem('loginUser', JSON.stringify(loginUser))
+    localStorage.setItem('userList', JSON.stringify(userList))
+    alert('변경 완료')
+    input.value = ""
+}
+
+/* 직급 변경 */
+function editRole(){
+    let input = document.querySelector("#editRole")
+    let role = input.value
+
+    if(role == ""){
+        alert("변경할 직급 선택하세요")
+        return
+    }
+    
+    let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+    let userList = JSON.parse(localStorage.getItem('userList'))
+
+    for(let i=0; i<userList.length; i++){
+        let user = userList[i]
+        if (user.userNo == loginUser.userNo){
+            user.roleNo = role
+            break
+        }
+    }
+
+    loginUser.roleNo = role
+    localStorage.setItem('loginUser', JSON.stringify(loginUser))
+    localStorage.setItem('userList', JSON.stringify(userList))
+    alert('변경 완료')
+    input.value = ""
+}
 
 let loginUser = JSON.parse(localStorage.getItem('loginUser'))
 

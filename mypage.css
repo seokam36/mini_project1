@@ -23,7 +23,7 @@
 }
 
 #card{
-    border-radius: 1%;
+    border-radius: 15px;
     margin: 30px 0;
     background-color: #717a87;
     padding: 10px;
@@ -56,7 +56,22 @@
     font-size: 20px;
     color: white;
     display: flex;
+    align-items: center;
     justify-content: end;
+}
+
+.remove,
+.leave{
+    font-family: 'Microorganism';
+    font-size: 20px;
+    background-color: #354649;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
 }
 
 #bodyHeader{
@@ -64,4 +79,55 @@
     font-size: 80px;
     display: flex;
     justify-content: center;
+}
+
+#edit{
+    width: 60%;
+    margin: 0 auto 30px;
+    background-color: #717a87;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#editName,
+#editPw,
+#editId,
+#editPosition{
+    font-family: 'Microorganism';
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#editPosition{
+    margin-bottom: 0;
+}
+
+#editName input,
+#editPw input,
+#editId input,
+#editPosition select{
+    font-family: 'Microorganism';
+    font-size: 20px;
+    background-color: #FFFBEB;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+#editName button,
+#editPw button,
+#editId button,
+#editPosition button{
+    font-family: 'Microorganism';
+    font-size: 20px;
+    background-color: #354649;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
