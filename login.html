@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='login.css'>
+</head>
+<body>
+    <!-- 헤더 부문 -->
+    <div id="header">
+        <!--로고-->
+        <div><a href="mainpage.html"> <img class="logo" src="./img/로고1.jpg"> </a></div> 
+    </div>
+    <!--본문-->
+    <div id="main">
+        <div class="loginbox">
+        <div>
+            <h2>로그인</h2>
+        </div>
+        <div class="inputbox">
+            <span>id :</span>
+            <input id="loginId" type="text">
+        </div>
+        <div class="inputbox">
+            <span>pw :</span>
+            <input id="loginPw" type="password">
+        </div>
+        <div>
+            <button onclick="login()">로그인</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
