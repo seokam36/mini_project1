@@ -30,12 +30,14 @@ function printMyList(){
                     break
                 }
             }
+            /* 글작성자와 마이페이지의 userNo 같으면 방 삭제하기 버튼 추가 */
             let removeBtn=''
             if(list.userNo == loginUser.userNo){
-                removeBtn = `<button class="remove" onclick="remove()">
+                removeBtn = `<button class="remove" onclick="remove(${list.contentNo})">
                             삭제하기</button>`
             }
 
+            /* 방 나가기 버튼 추가 */
             html += `<div id="card">
                         <div class="title">${list.title}</div>
                         <div class="name">${categoryName}</div>
@@ -49,6 +51,26 @@ function printMyList(){
     myList.innerHTML=html
 }
 
+function remove(contentNo){
+    let studyList = JSON.parse(localStorage.getItem('studyList'))
+    for(let i=0; i<studyList.length; i++){
+        let study = studyList[i]
+        if(study.contentNo == contentNo){
+            studyList.splice(i,1)
+            break
+        }
+    }
+    localStorage.setItem('studyList', JSON.stringify(studyList))
+    prompt("방 삭제 완료")
+    printMyList()
+}
+
+function leave(contentNo){
+    let studyList = JSON.parse(localStorage.getItem('studyList'))
+    for(let i=0; i<studyList.length; i++){
+        
+    }
+}
 let loginUser = JSON.parse(localStorage.getItem('loginUser'))
 
 if(loginUser != 0){

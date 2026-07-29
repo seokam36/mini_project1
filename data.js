@@ -43,8 +43,8 @@
         detail: "온라인으로할지 오프라인으로할지 아직 미정입니다",
         contentDate:"2026.07.27"
     }
-]; */
-
+];
+ */
 
 
 const studyType = [
