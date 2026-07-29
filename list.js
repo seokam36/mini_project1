@@ -37,7 +37,7 @@ function printList(){
         html += `<div id="card">
                     <div class="title">${study.title}</div>
                     <div class="name">${categoryName}</div>
-                    <div class="detail"">${study.detail}</div>
+                    <div class="detail">${study.detail}</div>
                     <div class="member">${area} 방인원 <span>${study.members.length}</span>/<span>${study.maxMember}</span></div>
                 </div>`
     }
