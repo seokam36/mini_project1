@@ -136,7 +136,7 @@ input, select, textarea, button {
     color: #354649;
 }
 
-.form-input {
+.form-input,.name-input {
     width: 600px;
     height: 40px;
     border: solid 1px #D6DFE1;
@@ -160,7 +160,7 @@ input, select, textarea, button {
     color: #354649;
 }
 
-#categorySelect,#studyTypeSelect{
+#categorySelect{
     width: 200px;
     height: 46px;
     border: solid 1px #D6DFE1;
@@ -169,14 +169,14 @@ input, select, textarea, button {
     font-size: 20px;
     color: gray;   
 }
-#personnel{
-    width: 150px;
+#personnelSelect{
+    width: 170px;
     height: 46px;
     border: solid 1px #D6DFE1;
     border-radius: 6px;
     padding-left: 15px;
     font-size: 20px;
-    color: #354649;
+    color: gray;   
 }
 .form-label2{
     width: 100px;
@@ -192,39 +192,20 @@ input, select, textarea, button {
 }
 .form-textarea{
     width: 700px;
-    height: 170px;
+    height: 270px;
     border: 1px solid #D6DFE1;
     border-radius: 6px;
     padding: 15px;
     font-size: 20px;
     color: #354649;
 }
-.textrea-row{
+.textarea-row{
     display: flex;
     align-items: center;
     margin-bottom: 22px;
     align-items: flex-start;
 }
-.role-area{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.role-box{
-    display: inline block;
-    width: 80px;
-    height: 36px;
-    border: 1px solid #D6DFE1;
-    font-size: 22px;
-    margin-right: 15px;
-    text-align: center;
-    border-radius: 10px;
-    line-height: 36px;
-}
-.help-text{
-    margin-left: 140px;
-    color: gray;
-}
+
 hr{
     border: none;
     border-top: 1px solid #E0E7E9;
@@ -238,12 +219,13 @@ hr{
     margin-left: 5px;
     height: 38px;
     border-radius: 5px;
-    border: 1px solid gray;
 }
 .btn-sub{
     background-color: white;
+    border: 1px solid rgb(152, 192, 193);
 }
 .btn-main{
     background-color: rgb(152, 192, 193);
     color: white;
+    border: none;
 }
