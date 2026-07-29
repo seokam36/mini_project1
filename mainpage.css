@@ -72,14 +72,6 @@ a { text-decoration: none; }
     align-items: center;
     justify-content: center;
 }
-#main2{
-    background-color: white;
-    height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /*#main2{
     background-image: url("./스터디.png");
     background-attachment: fixed; 
@@ -96,10 +88,6 @@ a { text-decoration: none; }
 
 .content > p{
     margin-top: 20px;
-}
-
-#main3_1{
-    text-align: center;
 }
 
 #footer{
@@ -150,4 +138,11 @@ a { text-decoration: none; }
 
 #popup > ul > li:hover .popupsub{
     display: flex;
+}
+
+a:hover{
+    color: pink;
+}
+a{
+    color: black;
 }
