@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Study With Me - 스터디 모집글 등록</title>
+    <link rel="stylesheet" href="write.css">
+</head>
+<body id="writePage">
+    <!-- 상단 메뉴 -->
+<div class="header">
+    <div class="header-inner">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo_header.png" alt="Study With Me 로고">
+            </a>
+        </div>
+
+        <div class="nav">
+            <a href="index.html">홈</a>
+            <a href="list.html">스터디 찾기</a>
+            <a href="write.html">스터디 모집</a>
+            <a href="#">내 스터디</a>
+            <a href="#">마이페이지</a>
+        </div>
+
+        <div class="logout">
+            로그아웃
+        </div>
+
+    </div>
+</div>
+     <!-- 페이지 제목 영역 -->
+<div class="write-title-area">
+    <div class="write-title-inner">
+
+        <div class="title-img-box">
+            <img src="img/icon.png" alt="스터디 모집 이미지">
+        </div>
+
+        <div class="title-text-box">
+            <h1 class="page-title">스터디 모집글 등록</h1>
+            <p class="page-subtitle">함께 성장할 스터디원을 모집해보세요.</p>
+        </div>
+    </div>
+</div>
+    <!-- 입력 폼 전체 박스 -->
+     <div class="container">
+        <div class="form-box">
+            <div class="form-row">
+                <div class="form-label"> 스터디 제목 </div>
+                <input id="titleInput" class="form-input" type="text" placeholder="스터디 제목을 입력해주세요.">
+            </div>
+            <div class="form-row">
+            <div class="form-label"> 카테고리 </div>
+            <select id="categorySelect" class="form-select">
+                <option value="">카테고리를 선택하세요.</option>
+                <option value="1">TOEIC</option>
+                <option value="2">TOEFL</option>
+                <option value="3">JLPT</option>
+                <option value="4">정보처리기사</option>
+                <option value="5">사회복지사1급</option>
+                <option value="6">SQL</option>
+                <option value="7">ADsP</option>
+                <option value="8">컴퓨터활용1급</option>
+                <option value="9">한국능력검정1급</option>
+                <option value="10">ADP</option>
+            </select>
+            </div>
+        </div>
+        <select id="studyTypeSelect" class="form-select">
+            <option value="1">온라인</option>
+            <option value="2">오프라인</option>
+            <option value="3">온라인 + 오프라인</option>
+            <option value="4">미정</option>
+        </select>
+     </div>
+
+
+
+</div>
+</body>
+</html>
