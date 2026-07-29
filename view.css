@@ -1,5 +1,5 @@
 *{
-    border: 1px solid red;
+
     box-sizing: border-box;
     padding: 0px; margin: 0px;
         
@@ -110,8 +110,13 @@ body{
     display: flex;
 }
 
+.innerbox > .bt1{
+    padding-top: 2px;
+}
+
+
 .bt1{
-    margin-top: 4px;
+    height: 30px;
 }
 .rolebox{
     background-color: #6e7c8c;
