@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='register.css'>
+</head>
+<body>
+    <!-- 헤더 부문 -->
+    <div id="header">
+        <!--로고-->
+        <div><a href="mainpage.html"> <img class="logo" src="img/logo_header.png"> </a></div> 
+    </div>
+    <!--본문-->
+    <div id="main">
+        <div class="registerbox">
+        <div>
+            <h2>회원가입</h2>
+        </div>
+        <div class="inputbox">
+            <span>id :</span>
+            <input id="idinput" type="text">
+        </div>
+        <div class="inputbox">
+            <span>pw :</span>
+            <input id="pwinput" type="password">
+        </div>
+        <div class="inputbox">
+            <span>이름 :</span>
+            <input id="nameinput" type="text">
+        </div>
+        <div class="inputbox">
+        <span>직급: </span>
+        <select id="role" class="selectbox"> 
+            <option value="">선택하세요</option>
+            <option value="1"> 남학생 </option>
+            <option value="2"> 여학생 </option>
+            <option value="3"> 멘토 </option>
+        </select>
+        </div>
+        <div>
+            <button class="register" onclick="register()">회원가입</button>
+        </div>
+        </div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>
