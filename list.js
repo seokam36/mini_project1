@@ -35,7 +35,7 @@ function printList(){
                     `<button class="apply_btn" onclick="apply(${study.contentNo})"> 신청하기 </button>` :
                     `<div class="full" > 모집완료 </div>`
         html += `<div id="card">
-                    <div class="title"><a href="view.html?no=${study.contentNo}">${study.title}</a></div>
+                    <div class="title"><a href="view.html?no=${study.contentNo}" style="color:white">${study.title}</a></div>
                     <div class="name">${categoryName}</div>
                     <div class="detail"><a href="view.html?no=${study.contentNo}">${study.detail}</a></div>
                     <div class="member">${area} 방인원 <span>${study.members.length}</span>/<span>${study.maxMember}</span></div>

@@ -29,6 +29,20 @@
     
     <div id="body">           <!-- body -->
         <h1 id="bodyHeader">MyPage</h1>
+        <div id="edit">
+            <div class="editName">이름 변경 : <input type="text"> <button onclick="editName()">변경하기</button></div>
+            <div class="editPw">비밀번호 변경 : <input type="text"> <button onclick="editPw()">변경하기</button></div>
+            <div class="editId">아이디 변경 : <input type="text"> <button onclick="editId()">변경하기</button></div>
+            <div class="editPostion">직급 변경 : 
+                <select id="role" class="selectbox"> 
+                    <option value="">선택하세요</option>
+                    <option value="1"> 남학생 </option>
+                    <option value="2"> 여학생 </option>
+                    <option value="3"> 멘토 </option>
+                </select>
+                <button onclick="editPostion()">변경하기</button>
+            </div>
+        </div>
         <div id="myList">
         
         </div>
