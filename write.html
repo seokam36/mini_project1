@@ -68,14 +68,48 @@
                 <option value="10">ADP</option>
             </select>
             </div>
+            <div class="form-row">
+                <div class="form-label"> 작성자 </div>
+                <input id="titleInput" class="form-input" type="text" placeholder="작성자명을 입력해주세요.">
+            </div>
+            <div class="form-row">
+                <div class="form-label"> 작성자 구분 </div>
+
+                <div class="role-area">
+                    <input id="roleMentor" type="radio" name="writerRole" value="멘토">
+                    <span class="role-box">멘토</span>
+                    <input id="roleStudent" type="radio" name="writerRole" value="학생">
+                    <span class="role-box">학생</span>
+                </div>
+            </div>
+            <hr>
+            <div class="form-row2">
+                <div class="form-label"> 모집 인원 </div>
+                <div>
+                <input id="personnel" class="form-input count-input" type="text" placeholder="인원을 입력해주세요.">
+            </div>    
+            <div class="form-label2"> 진행 방식 </div>
+            <select id="studyTypeSelect" class="form-select">
+                <option value="1">온라인</option>
+                <option value="2">오프라인</option>
+                <option value="3">온라인 + 오프라인</option>
+                <option value="4">미정</option>
+            </select>
         </div>
-        <select id="studyTypeSelect" class="form-select">
-            <option value="1">온라인</option>
-            <option value="2">오프라인</option>
-            <option value="3">온라인 + 오프라인</option>
-            <option value="4">미정</option>
-        </select>
+        <div class="textrea-row">
+            <div class="form-label"> 상세 내용 </div>
+            <textarea class="form-textarea" placeholder="스터디에 대한 상세 내용을 입력해주세요."></textarea>
+        </div>
+            <div class="form-row">
+                <div class="form-label"> 비밀번호 </div>
+                <input id="pwdInput" class="form-input" type="password" placeholder="사용자의 비밀번호를 입력해주세요.">
+            </div>
+            <div class="help-text">
+                . 
+            </div>
+        </div>
      </div>
+</div>
 
 
 
