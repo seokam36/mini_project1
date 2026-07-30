@@ -67,7 +67,50 @@ function getStudyDetail() {
         document.querySelector('.box2 .bt1').innerHTML = study.maxMember + '명';
         document.querySelector('.box3 .bt1').innerHTML = typeName;
         document.querySelector('.m2').innerHTML = study.detail;
-        
+
     }
 }
+
+function applyStudy() {
+    /* 로그인 유저 확인 */
+    let loginUser = JSON.parse(localStorage.getItem('loginUser'));
+    if(loginUser == null) {
+        alert('로그인 후 이용해주세요.');
+        return;
+    }
+
+    /* 주소창에서 현재 글 번호 가져오기 */
+    const selectNo = new URLSearchParams(location.search).get('no');
+
+    /* 스토리지 studyList값 꺼내오기 */
+    let studyList = localStorage.getItem('studyList');
+    if(studyList == null) {
+        studyList = [];
+    } else {
+        studyList = JSON.parse(studyList);
+    }
+
+    /* 배열에 유저 넣기 및 예외 처리 */
+    for(let i = 0; i < studyList.length; i++) {
+        let study = studyList[i];
+        if(study.contentNo == selectNo) {
+            
+            // 중복 신청 검사 (이미 members 배열에 내 번호가 있으면 막기)
+            if(study.members.includes(loginUser.userNo)) {
+                alert('이미 신청한 스터디입니다.');
+                return;
+            }
+
+            study.members.push(loginUser.userNo);
+            break;
+        }
+    }
+
+    /* 스토리지 저장 및 새로고침 */
+    localStorage.setItem('studyList', JSON.stringify(studyList));
+    alert('신청완료');
+    location.reload(); // 화면 새로고침해서 늘어난 인원수 체크
+}
+
+
 
