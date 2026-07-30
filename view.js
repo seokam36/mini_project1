@@ -10,7 +10,7 @@ function getStudyDetail() {
     if (studyListStorage == null) { studyListStorage = studyList; } 
     else { studyListStorage = JSON.parse(studyListStorage); }
 
-    let userStorage = localStorage.getItem('user');
+    let userStorage = localStorage.getItem('userList');
     if (userStorage == null) { userStorage = user; } 
     else { userStorage = JSON.parse(userStorage); }
 
