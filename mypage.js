@@ -32,9 +32,14 @@ function printMyList(){
             }
             /* 글작성자와 마이페이지의 userNo 같으면 방 삭제하기 버튼 추가 */
             let removeBtn=''
-            if(list.userNo == loginUser.userNo){
+            if(list.userNo == loginUser.userNo && list.members.length > 1){
+                removeBtn = `<button class="remove" onclick="remove(${list.contentNo})">
+                            삭제하기</button><button class="leave" onclick="leave(${list.contentNo})">나가기</button>`
+            } else if(list.userNo == loginUser.userNo){
                 removeBtn = `<button class="remove" onclick="remove(${list.contentNo})">
                             삭제하기</button>`
+            } else {
+                removeBtn = `<button class="leave" onclick="leave(${list.contentNo})">나가기</button>`
             }
 
             /* 방 나가기 버튼 추가 */
@@ -42,7 +47,7 @@ function printMyList(){
                         <div class="title">${list.title}</div>
                         <div class="name">${categoryName}</div>
                         <div class="detail">${list.detail}</div>
-                        <div class="member">${removeBtn}<button class="leave" onclick="leave(${list.contentNo})">나가기</button>
+                        <div class="member">${removeBtn}
                         방인원 <span>${list.members.length}</span>/<span>${list.maxMember}</span></div>
                     </div>`
         }
