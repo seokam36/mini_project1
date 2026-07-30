@@ -7,30 +7,24 @@
     <!--Warp-->
     <div class="Wrap"> 
 
-        <!--header-->
-        <div class="header"> 
-            <div class="logo">
-                <img src="img1/로고1.jpg">
-            </div>
-
-            <div class="right-heder">
-                <ol class="header-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="list.html">스터디찾기</a></li>
-                    <li><a href="write.html">스터디모집</a></li>
-                    <li><a href="mypage.html">마이페이지</a></li>
-                    <li><a href="#">로그아웃</a></li>
-                </ol>
-            </div>
-        <!--header끝-->
-        </div>
-
-        <!--배너-->
-        <div class="banner"> 
-            <img src="img1/배경.jpg" class="img1">
-            <span></span> 
-        <!--배너끝-->
-        </div>
+       <div id="header">
+        <!--로그인,회원기입-->
+        <ul id="topmenu">
+                <li id="user"></li>
+                <li id="login"><a href="login.html">Login</a><span>|</span></li>
+                <li id="register"><a href="register.html">Register</a></li>
+        </ul>
+        <!--카테고리 선택-->
+        <ul id="mainmenu">
+            <div><a href="index.html"> <img class="logo" src="img/logo_header.png"> </a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="list.html">스터디 찾기</a></li>
+                <li><a href="write.html">스터디 모집/등록</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+            </ul>
+        </ul>
+    </div>
 
         <!--main-->
         <div class="main">
@@ -74,7 +68,7 @@
         <div class="footer"> <!--footer-->
 
                 <div class="footer_logo">
-                    <img src="img1/로고2.jpg">
+                    <img src="img/logo_header.png">
                 </div>
 
                 <div class="footer-menu">
@@ -84,13 +78,6 @@
                         <li><a href="#">고객센터</a></li>
                     </ol>
                 </div>
-
-                <div class="sns">
-                    <img src="img1/인스타.jpg">
-                    <img src="img1/카톡.png">
-                    <img src="img1/페북.jpg">
-                </div>
-
         </div>
       
     </div>  <!--Warp끝--> 

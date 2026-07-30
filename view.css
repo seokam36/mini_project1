@@ -8,8 +8,14 @@
 a{ text-decoration: none; color: black;}
 
 li{ 
-    list-style-type: none;
-    padding: 20px;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Microorganism';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
 }
 
 body{
@@ -17,57 +23,73 @@ body{
 }
 
 .Wrap{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    padding-top:140px;
+}
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: mistyrose;
 }
 
-.header{
-    width: 100%;
-    height: 80px;
+#topmenu{
+    font-family: 'Microorganism';
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+#topmenu > li > span{
+    padding: 0px 20px;
+}
+
+#mainmenu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: beige;
+    padding: 0px 25px;
 }
-
-.logo > img{
-    width: 300px;
-    padding-top: 15px;
-}
-
-.header-list{
+.logo{
+    width: 210px;
+    height: auto;
+    display: block;
+}   
+#mainmenu > ul{
     display: flex;
     justify-content: flex-end;
-    padding: 0px;
+    width: 80%;
 }
-
-.banner{
-    width: 100%;
-    position: relative;
-}
-
-.banner > img{
-    width: 100%;
-    position: relative;
-}
-
-.banner > span{
-    position: absolute;
-    top : 50px;
-    left: 70px;
-    font-weight: bold;
+#mainmenu > ul > li{
+    font-family: 'Microorganism';
     font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    height: 40px;
+    margin-top: 0;
 }
 
-.img1{
-    width: 100%;
-    height: 150px;
-    object-fit: cover; 
-    object-position: bottom;
+a{
+    color: black;
+    text-decoration: none;
 }
+
+a:hover{
+    color: pink;
+}
+
+
 
 .main{
     width: 1000px;
     margin: 0 auto;
+    padding-top: 130px;
+    flex: 1;
 }
 
 .m1{
@@ -180,7 +202,6 @@ body{
 
 .footer_logo > img{
     width: 300px;
-    height: 97px;
     object-fit: contain;
 }
 
@@ -193,14 +214,7 @@ body{
     color: white;
 }
 
-.sns {
-    display: flex;
-    align-items: center;
-    gap: 15px;    
+.fm li{
+    padding:20px;
 }
 
-.sns > img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;   
-}
