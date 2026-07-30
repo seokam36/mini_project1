@@ -1,9 +1,17 @@
 *{
-
+    border: 1px solid red;
     box-sizing: border-box;
-    padding: 0px; margin: 0px;
+    padding: 0px; 
+    margin: 0px;
         
 } /* 전체 적용 */
+
+@font-face {
+    font-family: 'Microorganism';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
 
 a{ text-decoration: none; color: black;}
 
@@ -20,39 +28,80 @@ body{
     margin: 0 auto;
 }
 
-.header{
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+#topmenu {
+    font-family: 'Microorganism', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+
+#topmenu > li {
+    padding: 0; /* ★ 추가: 기존 전체 li에 걸려있던 padding: 20px 충돌 방지 */
+}
+
+#topmenu > li > span {
+    padding: 0px 20px;
+}
+
+#mainmenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: beige;
+    padding: 0px 25px;
 }
 
-.logo > img{
-    width: 300px;
-    padding-top: 15px;
-}
+.logo {
+    width: 210px;
+    height: auto;
+    display: block;
+}   
 
-.header-list{
+#mainmenu > ul {
     display: flex;
     justify-content: flex-end;
-    padding: 0px;
+    width: 80%;
 }
 
-.banner{
+#mainmenu > ul > li {
+    font-family: 'Microorganism', sans-serif;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    height: 40px;
+    margin-top: 0;
+}
+
+/* =========================================
+   배너 위치 조정 (가장 중요)
+========================================= */
+.banner {
     width: 100%;
     position: relative;
+    margin-top: 100px; /* ★ 추가: 헤더가 fixed로 공중에 떴기 때문에, 헤더 높이만큼 배너를 강제로 아래로 밀어줌 */
 }
 
-.banner > img{
+.banner > img {
     width: 100%;
     position: relative;
+    display: block;
+    
 }
 
-.banner > span{
+.banner > span {
     position: absolute;
-    top : 50px;
+    top: 50px;
     left: 70px;
     font-weight: bold;
     font-size: 30px;
@@ -175,6 +224,7 @@ body{
     justify-content: space-between;
     align-items: center;
     color: white;
+    padding-bottom: 2px;
 }
 
 
@@ -187,6 +237,7 @@ body{
 .fm{
     display: flex;
     justify-content: space-between;
+    margin-right: 40px;
 }
 
 .fm a{
@@ -200,8 +251,8 @@ body{
 }
 
 .sns > img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     margin-left: 10px;   
 }

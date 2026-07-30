@@ -95,12 +95,37 @@ function applyStudy() {
         let study = studyList[i];
         if(study.contentNo == selectNo) {
             
-            // 중복 신청 검사 (이미 members 배열에 내 번호가 있으면 막기)
-            if(study.members.includes(loginUser.userNo)) {
+            // ★ 추가: write.js에서 방금 막 작성된 글이라 members 배열이 없을 경우를 대비해 빈 배열 생성
+            if (!study.members) {
+                study.members = [];
+            }
+
+            // ★ 추가: 본인이 작성한 스터디인지 확인 (내가 쓴 글이면 신청 불가)
+            if (study.userNo == loginUser.userNo) {
+                alert('본인이 작성한 스터디에는 신청할 수 없습니다.');
+                return;
+            }
+            
+            // ★ 수정: 중복 신청 검사 (includes에서 발생하는 타입 오류 방지를 위해 명확하게 반복문으로 일치 비교)
+            let Overlap = false;
+            for(let j = 0; j < study.members.length; j++) {
+                if(study.members[j] == loginUser.userNo) {
+                    Overlap = true;
+                    break;
+                }
+            }
+            if(Overlap) {
                 alert('이미 신청한 스터디입니다.');
                 return;
             }
 
+            // ★ 추가: 정원 마감 검사 (현재 신청자 수가 최대 인원보다 크거나 같으면 막기)
+            if (study.members.length >= study.maxMember) {
+                alert('모집 인원이 마감되었습니다.');
+                return;
+            }
+
+            // 모든 검사 통과 시 배열에 추가
             study.members.push(loginUser.userNo);
             break;
         }
@@ -111,6 +136,3 @@ function applyStudy() {
     alert('신청완료');
     location.reload(); // 화면 새로고침해서 늘어난 인원수 체크
 }
-
-
-
