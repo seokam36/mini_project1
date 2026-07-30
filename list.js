@@ -1,6 +1,4 @@
 
-printList();
-
 /* 저장된 스터디방 모두 출력함수 */
 function printList(){
     /* 표현할 리스트 id값 list꺼내오기 */
@@ -44,7 +42,6 @@ function printList(){
 
     list.innerHTML = html
 }
-
 
 
 
