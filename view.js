@@ -120,6 +120,7 @@ if(loginUser != 0){
     document.querySelector("#register").style.display="none";
 }
 
+
 function logout(){
     localStorage.removeItem("loginUser");
     alert("로그아웃 되었습니다.");
