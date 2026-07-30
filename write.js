@@ -1,44 +1,109 @@
-printMyList()
-function printMyList(){
-    /* loginUser 스토리지에 파싱해서 가져오기 */
-    let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+console.log('write.js 연결 확인');
 
-     /* 매핑할 카테고리 스토리지에서 가져오기 */
-    let category = JSON.parse(localStorage.getItem('category'))
-    
-    let myList = document.querySelector('#myList')
-    let html =''
+// 1. 로그인한 사용자 정보 가져오기
+let loginUser = JSON.parse(localStorage.getItem('loginUser'));
 
-    /* 전체 리스트 조회하기 위해 스토리지에서 파싱해서 가져오기 */
-    let studyList = localStorage.getItem('studyList')
+// 테스트용 임시 로그인 사용자
+// 실제 로그인 성공 후에는 login.js가 loginUser를 저장하므로 이 부분은 자동으로 안 쓰이게 됨
+if(loginUser == null){
+    loginUser = {
+        userNo: 1,
+        userId: 'whgusdn',
+        userName: '조현우',
+        roleNo: 1
+    };
+}
+
+// 2. 작성자 칸에 로그인한 사용자 이름 자동 입력
+document.querySelector('#writerInput').value = loginUser.userName;
+
+
+// 3. 등록하기 버튼 클릭 시 실행
+function studyWrite(){
+
+    // 입력값 가져오기
+    let title = document.querySelector('#titleInput').value;
+    let categoryNo = document.querySelector('#categorySelect').value;
+    let maxMember = document.querySelector('#personnelSelect').value;
+    let studyTypeNo = document.querySelector('#studyTypeSelect').value;
+    let detail = document.querySelector('#detailInput').value;
+
+    // 입력 검사
+    if(title == ''){
+        alert('스터디 제목을 입력해주세요.');
+        return;
+    }
+
+    if(categoryNo == ''){
+        alert('카테고리를 선택해주세요.');
+        return;
+    }
+
+    if(maxMember == ''){
+        alert('모집 인원을 선택해주세요.');
+        return;
+    }
+
+    if(detail == ''){
+        alert('상세 내용을 입력해주세요.');
+        return;
+    }
+
+    // 기존 studyList 가져오기
+    let studyList = localStorage.getItem('studyList');
+
     if(studyList == null){
-        studyList = []
-    } else {
-        studyList = JSON.parse(studyList)
+        studyList = [];
+    }else{
+        studyList = JSON.parse(studyList);
     }
 
+    // 글 고유번호 만들기
+    let contentNo = 1;
 
-    /* 전체리스트 URL로 뽑아언 userNo랑 전체리스트 userNo 같은값 출력*/
-    for(let i=0; i<studyList.length; i++){
-        let list = studyList[i]
-        if(list.userNo == loginUser.userNo){
-            let categoryName = ''
-            /* 카테고리 이름과 카테고리 넘버 매핑 */
-            for(let j=0; j<category.length; j++){
-                if(list.categoryNo == category[j].categoryNo){
-                    categoryName = category[j].categoryName
-                    break
-                }
-            }
-            
-            html += `<div class="card">
-                        <div class="title">${list.title}</div>
-                        <div class="name">${categoryName}</div>
-                        <div class="detail">${list.detail}</div>
-                        <div class="member">방인원 <span>${list.members.length}</span>/<span>${list.maxMember}</span></div>
-                    </div>`
-        }
+    if(studyList.length > 0){
+        contentNo = studyList[studyList.length - 1].contentNo + 1;
     }
 
-    myList.innerHTML=html
+    // 오늘 날짜 만들기
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+
+    let contentDate = year + '.' + month + '.' + day;
+
+    // 새 게시글 객체 만들기
+    let study = {
+        contentNo: contentNo,
+        title: title,
+        userNo: loginUser.userNo,
+        categoryNo: Number(categoryNo),
+        studyTypeNo: Number(studyTypeNo),
+        maxMember: Number(maxMember),
+
+        // 방을 만든 사람도 현재 멤버에 포함
+        members: [loginUser.userNo],
+
+        detail: detail,
+        contentDate: contentDate
+    };
+
+    // studyList 배열에 새 글 추가
+    studyList.push(study);
+
+    // localStorage에 저장
+    localStorage.setItem('studyList', JSON.stringify(studyList));
+
+    console.log(studyList);
+
+    alert('스터디 모집글이 등록되었습니다.');
+
+    location.href = 'list.html';
+}
+
+
+// 목록으로 버튼
+function moveList(){
+    location.href = 'list.html';
 }
