@@ -32,7 +32,7 @@ function printList(){
 
         /* studyList.member의 배열의 길이가 maxMember랑 비교해서 작으면 신청하기 아니면 모집완료 */
         let area = study.members.length < study.maxMember ? 
-                    `<button class="apply_btn" onclick="apply(${study.contentNo})"> 신청하기 </button>` :
+                    `<div class="full" > 모집 중 </div>` :
                     `<div class="full" > 모집완료 </div>`
         html += `<div id="card">
                     <div class="title"><a href="view.html?no=${study.contentNo}" style="color:white">${study.title}</a></div>
@@ -46,32 +46,7 @@ function printList(){
 }
 
 
-/* 신청하기 함수 */
-function apply(contentNo){
-    /* 로그인한 유저 파싱해서 가져오기 */
-    let loginUser = JSON.parse(localStorage.getItem('loginUser'))
 
-    /* 스토리지 studyList값 꺼내서 studyList 저장 */
-    let studyList = localStorage.getItem('studyList')
-    if(studyList == null){
-        let studyList = []
-    } else {
-        studyList = JSON.parse(studyList)
-    }
-
-    /* studyList.contentNo 같은 값 찾아서 members 배열에 contentNo 넣기 */
-    for(let i=0; i<studyList.length; i++){
-        let study = studyList[i]
-        if(study.contentNo == contentNo){
-            study.members.push(loginUser.userNo)
-            break
-        }   
-    }
-
-    localStorage.setItem('studyList', JSON.stringify(studyList))
-    alert('신청완료')
-    printList()
-}
 
 let loginUser = JSON.parse(localStorage.getItem('loginUser'))
 
