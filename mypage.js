@@ -1,4 +1,11 @@
-printMyList()
+let loginUser = JSON.parse(localStorage.getItem('loginUser'))
+if(loginUser == null){
+    alert("로그인 후 이용해주세요")
+    location.href = 'login.html'
+} else {
+    printMyList()
+}
+
 function printMyList(){
     /* loginUser 스토리지에 파싱해서 가져오기 */
     let loginUser = JSON.parse(localStorage.getItem('loginUser'))
@@ -205,9 +212,7 @@ function editRole(){
     input.value = ""
 }
 
-let loginUser = JSON.parse(localStorage.getItem('loginUser'))
-
-if(loginUser != 0){
+if(loginUser){
     document.querySelector('#user').innerHTML = `${loginUser.userName}님 환영합니다!`;
     document.querySelector('#login').innerHTML = `<a href='' onclick="logout()">Logout</a>`;
     document.querySelector("#register").style.display="none";
