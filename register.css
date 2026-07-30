@@ -18,7 +18,7 @@ a { text-decoration: none; }
     left:0;
     width: 100%;
     height: 80px;
-    background-color: #F5FAFA;
+    background-color: mistyrose;
 }
 .logo{
     width: 260px;
@@ -32,7 +32,7 @@ a { text-decoration: none; }
     font-size: 50px;       
 }
 .registerbox{
-    background-color: #6C7A89;
+    background-color: mistyrose;
     width: 500px;
     height: 400px;
     display: flex;
