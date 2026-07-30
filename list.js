@@ -65,8 +65,7 @@ function apply(contentNo){
         if(study.contentNo == contentNo){
             study.members.push(loginUser.userNo)
             break
-        }
-        
+        }   
     }
 
     localStorage.setItem('studyList', JSON.stringify(studyList))
