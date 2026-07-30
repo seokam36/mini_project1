@@ -88,7 +88,7 @@ a:hover{
 .main{
     width: 1000px;
     margin: 0 auto;
-    padding-top: 130px;
+    /* padding-top: 130px; */
     flex: 1;
 }
 
@@ -216,5 +216,10 @@ a:hover{
 
 .fm li{
     padding:20px;
+}
+
+.banner{
+    font-family: 'Microorganism';
+    font-size: 50px;   
 }
 
