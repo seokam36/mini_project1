@@ -17,7 +17,7 @@ a { text-decoration: none; }
     top:0;
     left:0;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: mistyrose;
 }
 
 #topmenu{
@@ -90,6 +90,9 @@ a { text-decoration: none; }
     margin-top: 20px;
 }
 
+.content > p > span{
+    color: mistyrose;
+}
 #footer{
     font-family: 'Microorganism';
     font-size: 40px;
@@ -97,7 +100,7 @@ a { text-decoration: none; }
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #FFFBEB;
+    background-color: mistyrose;
     color: rgba(0, 0, 0, 0.2);
 }
 
