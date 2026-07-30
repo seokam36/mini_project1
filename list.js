@@ -1,3 +1,12 @@
+let login = JSON.parse(localStorage.getItem('loginUser'))
+if(login == null){
+    alert("로그인 후 이용해주세요")
+    location.href = 'login.html'
+} else {
+    printList()
+}
+
+
 
 /* 저장된 스터디방 모두 출력함수 */
 function printList(){
