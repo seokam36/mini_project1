@@ -1,4 +1,4 @@
-/* onst studyList = [
+ const studyList = [
     {
         contentNo: 1,
         title: "토익 스터디 하실분",
@@ -43,7 +43,7 @@
         detail: "온라인으로할지 오프라인으로할지 아직 미정입니다",
         contentDate:"2026.07.27"
     }
-]; */
+];
 
 
 
@@ -123,6 +123,9 @@ const category = [
         categoryName:"ADP"
     },
 ]
+if(localStorage.getItem('studyList') == null){
+    localStorage.setItem('studyList', JSON.stringify(studyList))
+}
 
 if(localStorage.getItem('studyType') == null){
     localStorage.setItem('studyType', JSON.stringify(studyType))
