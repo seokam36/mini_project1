@@ -60,7 +60,6 @@ function getStudyDetail() {
         }
 
         // HTML에 덮어쓰기
-        document.querySelector('.banner > span').innerHTML = 'NO. ' + selectNo;
         document.querySelector('.m1').innerHTML = study.title;
         document.querySelector('.box1 .bt1').innerHTML = writer.userName;
         document.querySelector('.rolebox').innerHTML = writerRole;
