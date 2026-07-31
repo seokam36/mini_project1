@@ -30,6 +30,7 @@ a { text-decoration: none; }
     align-items:center;   
     font-family: 'Microorganism';
     font-size: 50px;       
+    background-color: #F5FAFA;
 }
 .registerbox{
     background-color: mistyrose;
