@@ -98,7 +98,7 @@ function studyWrite(){
 
     alert('스터디 모집글이 등록되었습니다.');
 
-    location.href = 'list.html';
+    location.href = 'index.html';
 }
 
 
