@@ -32,5 +32,5 @@ function login(){
     
     alert(`${loginUser.userName}님 로그인 성공입니다`)
     localStorage.setItem('loginUser', JSON.stringify(loginUser))
-    location.href = `mainpage.html`;
+    location.href = `index.html`;
 }

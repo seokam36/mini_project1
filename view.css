@@ -1,0 +1,260 @@
+*{
+    
+    box-sizing: border-box;
+    padding: 0px; margin: 0px;
+        
+} /* 전체 적용 */
+
+a{ text-decoration: none; color: black;}
+
+li{ 
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Microorganism';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body{
+    background-color: #E0E7E9;
+}
+
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: mistyrose;
+}
+
+#topmenu{
+    font-family: 'Microorganism';
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+#topmenu > li > span{
+    padding: 0px 20px;
+}
+
+#mainmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+}
+.logo{
+    width: 210px;
+    height: auto;
+    display: block;
+}   
+#mainmenu > ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+#mainmenu > ul > li{
+    font-family: 'Microorganism';
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    height: 40px;
+    margin-top: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: pink;
+}
+
+
+
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    height:100vh;
+    padding-top: 130px; 
+    flex: 1;
+}
+
+.m1{
+    display: block;
+    margin-top: 100px;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.box-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box{
+    background-color: beige;
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+    font-family: 'Microorganism';
+}
+
+.bt{
+    display: block;
+    font-size: 20px;
+    margin: 0px 0px 10px;
+}
+.bt1{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.innerbox{
+    display: flex;
+}
+
+.innerbox > .bt1{
+    padding-top: 2px;
+}
+
+
+.bt1{
+    height: 30px;
+}
+.rolebox{
+    background-color: #6e7c8c;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.text-wrap{
+    margin-top: 50px;
+}
+
+.m2{
+    font-size: 30px;
+}
+
+.line{
+    border: none;
+    border-top: 2px solid #b1afaf;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.boxwrap1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4{
+    margin-top: 20px;
+    width: 500px;
+    height: 90px;
+    background-color: #2d3648;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+
+.footer{
+    background-color: #354649;
+    margin-top: 60px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+
+/* 푸터 영역 */
+.footer-area {
+width: 100%;
+background-color: mistyrose;
+border-top: 1px solid #F0D4D0;
+padding: 22px 0;
+}
+
+.footer-inner {
+width: 1280px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* 왼쪽 로고 + 문구 */
+.footer-logo {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.footer-logo-img-box {
+width: 150px;
+height: 45px;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footer-logo-img-box img {
+width: 230px;
+height: auto;
+display: block;
+}
+
+.footer-logo p {
+margin-top: 4px;
+font-size: 17px;
+color: gray;
+}
+
+/* 오른쪽 메뉴 */
+.footer-menu {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.footer-menu a {
+font-size: 18px;
+color: gray;
+}
+
+.footer-menu span {
+font-size: 18px;
+color: gray;
+}
+.banner{
+    font-family: 'Microorganism';
+    font-size: 50px;   
+}
