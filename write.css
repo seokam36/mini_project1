@@ -31,7 +31,7 @@ input, select, textarea, button {
     width: 100%;
     height: 80px;
     border-bottom: solid 1px #E0E7E9;
-    background-color: #FFFFFF;
+    background-color: mistyrose;
 }
 
 .header-inner {
@@ -55,22 +55,35 @@ input, select, textarea, button {
 .nav {
     display: flex;
     gap: 55px;
+    margin-left: 540px;
+    width: 600px;
 }
-
+.logout{
+    padding-left: 10px;
+}
 .nav a {
     font-size: 25px;
     color: #354649;
 }
-
-.logout {
+.logout{
+    width: 120px;
+}
+.logout a{
+    padding-left: 20px;
     margin-left: auto;
-    font-size: 24px;
+    font-size: 25px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 /* 제목 영역 */
 .write-title-area {
     width: 100%;
     height: 180px;
-    background-color: #F5FAFA;
+    background-color: #FFF6F4;
 }
 
 .write-title-inner {
@@ -117,9 +130,9 @@ input, select, textarea, button {
     min-height: 500px;
     margin: 0 auto;
     background-color: #FFFFFF;
-    border: solid 1px #E0E7E9;
+    border: solid 1px #F0D4D0;
     border-radius: 12px;
-    box-shadow: 0px 4px 15px #dddddd;
+    box-shadow: 0px 4px 15px rgba(120, 90, 90, 0.15);
     padding: 45px;
 }
 
@@ -219,6 +232,7 @@ hr{
     margin-left: 5px;
     height: 38px;
     border-radius: 5px;
+    font-size: 17px;
 }
 .btn-sub{
     background-color: white;
@@ -228,4 +242,70 @@ hr{
     background-color: rgb(152, 192, 193);
     color: white;
     border: none;
+}
+
+#writerInput:disabled{
+    background-color: #f3f5f6;
+    color: #6C7A89;
+    cursor: not-allowed;
+}
+/* 푸터 영역 */
+.footer-area {
+width: 100%;
+background-color: mistyrose;
+border-top: 1px solid #F0D4D0;
+padding: 22px 0;
+}
+
+.footer-inner {
+width: 1280px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* 왼쪽 로고 + 문구 */
+.footer-logo {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.footer-logo-img-box {
+width: 150px;
+height: 45px;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footer-logo-img-box img {
+width: 230px;
+height: auto;
+display: block;
+}
+
+.footer-logo p {
+margin-top: 4px;
+font-size: 17px;
+color: gray;
+}
+
+/* 오른쪽 메뉴 */
+.footer-menu {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.footer-menu a {
+font-size: 18px;
+color: gray;
+}
+
+.footer-menu span {
+font-size: 18px;
+color: gray;
 }
