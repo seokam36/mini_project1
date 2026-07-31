@@ -56,15 +56,18 @@ input, select, textarea, button {
     display: flex;
     gap: 55px;
     margin-left: 540px;
+    width: 600px;
 }
 .logout{
     padding-left: 10px;
 }
 .nav a {
-    font-size: 23px;
+    font-size: 25px;
     color: #354649;
 }
-
+.logout{
+    width: 120px;
+}
 .logout a{
     padding-left: 20px;
     margin-left: auto;
