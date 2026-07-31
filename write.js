@@ -1,9 +1,3 @@
-let login = JSON.parse(localStorage.getItem('loginUser'))
-if(login == null){
-    alert("로그인 후 이용해주세요")
-    location.href = 'login.html'
-}
-
 console.log('write.js 연결 확인');
 
 // 1. 로그인한 사용자 정보 가져오기
@@ -11,14 +5,14 @@ let loginUser = JSON.parse(localStorage.getItem('loginUser'));
 
 // 테스트용 임시 로그인 사용자
 // 실제 로그인 성공 후에는 login.js가 loginUser를 저장하므로 이 부분은 자동으로 안 쓰이게 됨
-/* if(loginUser == null){
+if(loginUser == null){
     loginUser = {
         userNo: 1,
         userId: 'whgusdn',
         userName: '조현우',
         roleNo: 1
     };
-} */
+}
 
 // 2. 작성자 칸에 로그인한 사용자 이름 자동 입력
 document.querySelector('#writerInput').value = loginUser.userName;
@@ -112,16 +106,4 @@ function studyWrite(){
 // 목록으로 버튼
 function moveList(){
     location.href = 'list.html';
-}
-
-let loginUser = JSON.parse(localStorage.getItem('loginUser'))
-
-if(loginUser != 0){
-    document.querySelector('#logout').innerHTML = `<a href='' onclick="logout()">ㅤLogout</a>`;
-}
-
-function logout(){
-    localStorage.removeItem("loginUser");
-    alert("로그아웃 되었습니다.");
-    location.reload();
 }
