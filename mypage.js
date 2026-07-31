@@ -50,8 +50,6 @@ function printMyList(){
                             삭제하기</button>`
 
             /* 개설자가 아닌 참여자 -> 나가기만 가능 */
-
-            /* 개설자가 아닌 참여자 -> 나가기만 가능 */
             } else {
                 removeBtn = `<button class="leave" onclick="leave(${list.contentNo})">나가기</button>`
             }
