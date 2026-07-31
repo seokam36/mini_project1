@@ -39,17 +39,17 @@ function printMyList(){
             }
             /* 마이 페이지 스터디 목록 카드에 표시할 버튼 결정 */
             let removeBtn=''
-            /*  내가 개설자 + 다른 참여자가 있음 → 삭제/나가기 모두 선택 가능 */
+            /*  내가 개설자 + 다른 참여자가 있음 -> 삭제/나가기 모두 선택 가능 */
             if(list.userNo == loginUser.userNo && list.members.length > 1){
                 removeBtn = `<button class="remove" onclick="remove(${list.contentNo})">
                             삭제하기</button><button class="leave" onclick="leave(${list.contentNo})">나가기</button>`
 
-            /* 내가 개설자 + 혼자만 남음 → 나갈 수 없으므로 삭제만 가능 */
+            /* 내가 개설자 + 혼자만 남음 -> 나갈 수 없으므로 삭제만 가능 */
             } else if(list.userNo == loginUser.userNo){
                 removeBtn = `<button class="remove" onclick="remove(${list.contentNo})">
                             삭제하기</button>`
 
-            /* 개설자가 아닌 참여자 → 나가기만 가능 */
+            /* 개설자가 아닌 참여자 -> 나가기만 가능 */
             } else {
                 removeBtn = `<button class="leave" onclick="leave(${list.contentNo})">나가기</button>`
             }
